@@ -36,3 +36,5 @@ Task_128_RoadAccidentDetectionSystem/models/epoch61.pt.zip
 *.avi 
 *.png 
 *.jpg 
+*.pt 
+*.h5 
