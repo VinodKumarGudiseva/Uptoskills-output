@@ -1,17 +1,35 @@
-# Python virtual environment
+﻿# Python virtual environment
 env/
+venv/
 __pycache__/
+*.pyc
 
 # Datasets and large files
 dev_data_pump/
 
 # OS generated files
 .DS_Store
+
+# Node / build files
 node_modules/
 build/
 dist/
 coverage/
-.DS_Store
+
+# Logs
 *.log
+logs/*
+
+# Environment / secrets
+.env
 .env*
 !.env.example
+
+# Uploaded/generated files
+uploads/*
+
+# Local audio files
+audio.wav
+
+# VS Code
+.vscode/

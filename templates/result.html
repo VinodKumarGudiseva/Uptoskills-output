@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .positive {
+            color: green;
+        }
+
+        .negative {
+            color: red;
+        }
+
+        .neutral {
+            color: orange;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Analysis Result</h2>
+
+    <p><span class="highlight">Transcript:</span><br> {{ transcript }}</p>
+
+    <p>
+        <span class="highlight">Sentiment:</span>
+        <span class="
+            {% if 'Positive' in sentiment %}positive
+            {% elif 'Negative' in sentiment %}negative
+            {% else %}neutral
+            {% endif %}
+        ">
+            {{ sentiment }}
+        </span>
+    </p>
+
+    <p><span class="highlight">Emotion:</span> {{ emotion }}</p>
+
+    <p>
+        <span class="highlight">Frustration:</span>
+        <span class="
+            {% if frustration == 'High' %}negative
+            {% else %}positive
+            {% endif %}
+        ">
+            {{ frustration }}
+        </span>
+    </p>
+
+    <p><span class="highlight">Intent:</span> {{ intent }}</p>
+
+    <p><span class="highlight">Recommendation:</span> {{ recommendation }}</p>
+
+    <a href="/" class="btn">← Back</a>
+</div>
+
+</body>
+</html>
